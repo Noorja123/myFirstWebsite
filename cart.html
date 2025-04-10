@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cart.css">
+    <title>Cart</title>
+
+    <body>
+        <header>  
+         <h1><font face="font-family:cursive" color="Green" > Laece craeft</h1></font><br><br>
+          </header>
+
+        <style>
+            body {
+              background-image: url('Free-Medicine-Background.jpg');
+              backdrop-filter: blur(7px);
+            }
+            </style>
+    </head>
+
+<body>
+  <div class="container">
+    <h1>Your Cart</h1>
+    <div style="border: 3px solid rgb(16, 15, 15); padding:20px; display:inline-block ;border-radius:10px 10px 10px 10px;
+    box-shadow:0px 0px 5px 5px rgb(219,219,219);background-color:azure;width:auto " >
+    <div class="product">
+
+        <b>
+    <ul id="cart-items"></ul></b>
+    </div></div>
+
+    <br>
+    <a href="blood.html">Back to Blood</a><br>
+    <a href="bones.html">Back to Bones</a><br>
+    <a href="dia.html">Back to Diabetes</a><br>
+    <a href="heart.html">Back to Heart</a><br>
+    <a href="immune.html">Back to Immune System</a><br>
+    <a href="inj.html">Back to Injections</a><br>
+    <a href="kidney.html">Back to Kidney</a><br>
+    <a href="lungs.html">Back to Lungs</a><br>
+    <a href="med.html">Back to First Aid</a><br>
+    <a href="mental.html">Back to Mental Health</a><br>
+    <a href="nose.html">Back to Nasal</a><br>
+
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const cartItemsList = document.getElementById('cart-items');
+        let cart = JSON.parse(localStorage.getItem('cart')) || {};
+
+        function updateCart() {
+            cartItemsList.innerHTML = '';
+
+            for (const [id, item] of Object.entries(cart)) {
+                const li = document.createElement('li');
+                li.innerHTML = `${item.name} - Quantity: ${item.quantity} <button data-id="${id}">Remove</button>`;
+                cartItemsList.appendChild(li);
+            }
+
+            cartItemsList.querySelectorAll('button').forEach(button => {
+                button.addEventListener('click', () => {
+                    removeFromCart(button.dataset.id);
+                });
+            });
+        }
+
+        function removeFromCart(id) {
+            if (cart[id].quantity > 1) {
+                cart[id].quantity -= 1;
+            } else {
+                delete cart[id];
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCart();
+        }
+
+        updateCart();
+    });
+</script>
+
+<footer>
+    <p>&copy;2024 laece craeft.All rights reserved </p>
+    <address>Andheri,Mumbai<br><i class="fa-solid fa-phone"></i>
+    Email:laececraeftinfo@gmail.com</address>
+</footer>
+ 
+</body>
+</html>

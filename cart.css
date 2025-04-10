@@ -1,0 +1,36 @@
+header
+{
+    background-color: transparent;
+    color:green;
+    text-align:center;
+    padding:1em 0;
+}
+.product button {
+    background-color: #9079f6e2;
+    color:azure;
+    border: none;
+    border-radius: 30px;
+    padding: 20px 20px;
+    cursor:pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #ef6878;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+footer 
+{
+  background-color: transparent;
+  color:black;
+  text-align: center;
+  padding: auto;
+  position: fixed;
+  height: 0%;
+  width: 100%;
+}

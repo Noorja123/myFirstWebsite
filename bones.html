@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<head>
+    <title> Bones  </title>
+   </head> 
+   <body>
+    <link rel="stylesheet" href="allmed.css">
+
+    <header>
+        <h1 style="font-family:Brush Script Mt "> Laece craeft</h1>
+      
+         </header>
+         <style>
+          .scroll-container {
+              height: 500px;
+              overflow-y: scroll;
+          }
+      
+          .scroll-container::-webkit-scrollbar {
+              width: 12px;
+          }
+      
+          .scroll-container::-webkit-scrollbar-track {
+              background: #f1f1f1;
+          }
+      
+          .scroll-container::-webkit-scrollbar-thumb {
+              background: #888;
+          }
+      
+          .scroll-container::-webkit-scrollbar-thumb:hover {
+              background: #555;
+          }
+      
+          .scroll-container::-webkit-scrollbar-button {
+              display: none;
+          }
+      </style>
+      </head>
+        <body>
+            <style>
+                body {
+                  background-image: url('Free-Medicine-Background.jpg');
+                  backdrop-filter: blur(5px);
+                }
+                </style>
+      </body>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cart = JSON.parse(localStorage.getItem('cart')) || {};
+
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', () => {
+                    const itemElement = button.closest('.item');
+                    const id = itemElement.dataset.id;
+                    const itemName = itemElement.querySelector('span').textContent;
+
+                    if (cart[id]) {
+                        cart[id].quantity += 1;
+                    } else {
+                        cart[id] = { name: itemName, quantity: 1 };
+                    }
+
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                });
+            });
+        });
+    </script>
+         <a href="cart.html">Go to Cart</a>
+       
+       
+          <header>
+            <font face="font-family:cursive" color="Black" >  <h2>Bones</h2></font>
+            <div class="scroll-container">
+                <div class="product-grid">
+
+
+
+                    <div class="product">
+                        <div class="item" data-id="17">
+                        <img src="bones1.jpg" alt="">
+                       <span><h2>Bonmax PTH 750mcg Cartridge 3's</h2></span> 
+                        <p><h3>₹16700</h3></p>
+                        <button  class="add-to-cart">Add to Cart</button>
+                    </div></div>
+
+
+
+                    <div class="product">
+                        <div class="item" data-id="18">
+                        <img src="bones2.jpg" alt="">
+                        <span><h2>Copellor Auto 80mg Pen Injection</h2></span>
+                        <p><h3>₹22275</h3></p>
+                        <button  class="add-to-cart">Add to Cart</button>
+                    </div></div>
+                    
+                    <div class="product">
+                        <div class="item" data-id="19">
+                        <img src="bones3.jpg" alt="">
+                        <span><h2>Denoci 120mg Injection</h2></span>
+                        <p><h3>₹21945</h3></p>
+                        <button>Add to Cart</button>
+                    </div></div>
+
+
+                    <div class="product">
+                        <div class="item" data-id="20">
+                        <img src="bones4.jpg" alt="">
+                        <span><h2>Denoci OP 60mg Injection</h2></span>
+                        <p><h3>₹9000</h3></p>
+                        <button  class="add-to-cart">Add to Cart</button>
+                    </div></div>
+                    
+                    
+                    <div class="product">
+                        <div class="item" data-id="21">
+                        <img src="bones5.jpg" alt="">
+                        <span><h2>Emtofa XR 11mg Tablet</h2></span>
+                        <p><h3>₹466</h3></p>
+                        <button  class="add-to-cart">Add to Cart</button>
+                    </div></div>
+
+
+                    <div class="product">
+                        <div class="item" data-id="22">
+                        <img src="bones6.jpg" alt="">
+                        <span><h2>Exemptia 20mg Injection</h2></span>
+                        <p><h3>₹7575</h3></p>
+                        <button  class="add-to-cart">Add to Cart</button>
+                    </div></div>
+
+
+                    <div class="product">
+                        <div class="item" data-id="23">
+                        <img src="bones7.jpg" alt="">
+                        <span><h2>Febutaz 80mg Tablet</h2></span>
+                        <p><h3>₹227</h3></p>
+                        <button  class="add-to-cart">Add to Cart</button>
+                    </div></div>
+
+
+                    <div class="product">
+                        <div class="item" data-id="24">
+                        <img src="bones8.jpg" alt="">
+                        <span><h2>Jollimine 250mg Capsule</h2></span>
+                        <p><h3>₹165</h3></p>
+                        <button  class="add-to-cart">Add to Cart</button>
+                    </div></div>
+                   
+               
+                </div>
+
+</div>
+                <footer>
+                    <b><p>&copy;2024 Laece craeft Pvt Ltd. All rights reserved.
+                        In compliance with Drugs and Cosmetics Act, 1940 and Drugs and Cosmetics Rules, 1945</p>
+                    <address>Andheri,Mumbai<br><i class="fa-solid fa-phone"></i>
+                    Email:laececraeftinfo@gmail.com</address></b>
+                </footer>
+
+        </body>
+        
+        </html>
+    

@@ -1,0 +1,23 @@
+header
+{
+    
+    color:green;
+    text-align:center;
+    padding:1em 0;
+}
+
+body
+{
+    text-align: center;
+}
+
+footer 
+{
+  background-color: transparent;
+  color:black;
+  text-align: center;
+  padding: auto;
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+}

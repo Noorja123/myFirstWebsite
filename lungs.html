@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<head>
+    <title> Lungs  </title>
+   </head> 
+   <body>
+    <link rel="stylesheet" href="allmed.css">
+
+    <header>
+        <h1 style="font-family:Brush Script Mt "> Laece craeft</h1>
+      
+         </header>
+         <style>
+          .scroll-container {
+              height: 500px;
+              overflow-y: scroll;
+          }
+      
+          .scroll-container::-webkit-scrollbar {
+              width: 12px;
+          }
+      
+          .scroll-container::-webkit-scrollbar-track {
+              background: #f1f1f1;
+          }
+      
+          .scroll-container::-webkit-scrollbar-thumb {
+              background: #888;
+          }
+      
+          .scroll-container::-webkit-scrollbar-thumb:hover {
+              background: #555;
+          }
+      
+          .scroll-container::-webkit-scrollbar-button {
+              display: none;
+          }
+      </style>
+      </head>
+        <body>
+            <style>
+                body {
+                  background-image: url('Free-Medicine-Background.jpg');
+                  backdrop-filter: blur(5px);
+                }
+                </style>
+      </body>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cart = JSON.parse(localStorage.getItem('cart')) || {};
+        
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', () => {
+                    const itemElement = button.closest('.item');
+                    const id = itemElement.dataset.id;
+                    const itemName = itemElement.querySelector('span').textContent;
+        
+                    if (cart[id]) {
+                        cart[id].quantity += 1;
+                    } else {
+                        cart[id] = { name: itemName, quantity: 1 };
+                    }
+        
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                });
+            });
+        });
+        </script>
+         <a href="cart.html">Go to Cart</a>
+       
+       
+          <header>
+            <font face="font-family:cursive" color="Black" >  <h2>Lungs/Respiratory </h2></font>
+            <div class="scroll-container">
+                <div class="product-grid">
+
+
+                    <div class="product">
+                        <div class="item" data-id="57">
+                        <img src="lungs8.jpg" alt="">
+                     <span><h2>Anemol Infusion</h2></span>
+                        <p><h3>₹342</h3></p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div></div>
+
+
+                    <div class="product">
+                        <div class="item" data-id="58">
+                        <img src="lungs1.jpg" alt="">
+                     <span><h2>Budecort 1mg Respules</h2></span>
+                        <p><h3>₹120</h3></p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div></div>
+
+
+                    <div class="product">
+                        <div class="item" data-id="59">
+                        <img src="lungs2.jpg" alt="">
+                        <span><h2>Mucomix Ace Tablet</h2></span>
+                        <p><h3>₹192</h3></p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div></div>
+
+
+                    <div class="product">
+                        <div class="item" data-id="60">
+                        <img src="lungs3.jpg" alt="">
+                        <span><h2>Pirfenex 600mg Tablet</h2></span>
+                        <p><h3>₹831</h3></p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div></div>
+
+
+                    <div class="product">
+                        <div class="item" data-id="61">
+                        <img src="lungs4.jpg" alt="">
+                        <span><h2>Rosuvas F 10mg Tablet</h2></span>
+                        <p><h3>₹386</h3></p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div></div>
+
+
+                    <div class="product">
+                        <div class="item" data-id="62">
+                        <img src="lungs5.jpg" alt="">
+                        <span><h2>Survanta 200mg Injection</h2></span>
+                        <p><h3>₹12438</h3></p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div></div>
+
+
+                    <div class="product">
+                        <div class="item" data-id="63">
+                        <img src="lungs6.png" alt="">
+                        <span><h2>Tobamist Respules</h2></span>
+                        <p><h3>₹2062</h3></p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div></div>
+
+
+                    <div class="product">
+                        <div class="item" data-id="64">
+                        <img src="lungs7.jpg" alt="">
+                        <span><h2>Anemol Infusion</h2></span>
+                        <p><h3>₹342</h3></p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div></div>
+                   
+               
+                </div>
+
+
+                </div>
+                <footer>
+                    <b><p>&copy;2024 Laece craeft Pvt Ltd. All rights reserved.
+                        In compliance with Drugs and Cosmetics Act, 1940 and Drugs and Cosmetics Rules, 1945</p>
+                    <address>Andheri,Mumbai<br><i class="fa-solid fa-phone"></i>
+                    Email:laececraeftinfo@gmail.com</address></b>
+                </footer>
+
+        </body>
+        
+        </html>
+    
+        

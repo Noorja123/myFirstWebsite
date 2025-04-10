@@ -1,0 +1,68 @@
+
+  header
+{
+    
+    color:green;
+    text-align:center;
+    padding:1em 0;
+}
+
+.flex-container {
+  display: flex;
+  background-color: rgb(150, 221, 147);
+  border-radius: 35px;
+  color:rgb(69, 74, 206);
+  padding:30px;
+  justify-content: space-evenly;
+  border-radius: 50px;
+  width:20%;
+  margin-left: 40%;
+  background-color: azure;
+}
+
+.flex-container1{
+  display: float;
+  background-color: azure;
+  border-radius: 35px;
+  color:rgb(69, 74, 206);
+  padding:70px;
+  justify-content: space-evenly;
+  border-radius: 50px;
+  width:fit-content;
+ height:fit-content;
+}
+.mission-vision {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.mission, .vision {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.flex-container5
+{
+  display: flex;
+  background-color: rgb(150, 221, 147);
+  border-radius: 35px;
+  color:rgb(69, 74, 206);
+  padding:70px;
+  justify-content: flex-start;
+  border-radius: 50px;
+  width:50%;
+  margin-left: 20%;
+  background-color: azure;
+} 
+
+footer 
+{
+  background-color: transparent;
+  color:black;
+  text-align: center;
+  padding: auto;
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+}
